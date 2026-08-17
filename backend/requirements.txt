@@ -1,0 +1,13 @@
+# FastAPI backend for Animal Species Recognition System
+# Python 3.10+ recommended
+
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+Pillow==10.4.0
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+
+# Deep learning — TensorFlow + Keras (EfficientNet-B0)
+# CPU wheel; for GPU support install tensorflow with CUDA support instead.
+tensorflow==2.16.1

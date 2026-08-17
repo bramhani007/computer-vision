@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-forest-50 text-forest-950 font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    @apply bg-forest-600 text-white;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .card {
+    @apply rounded-2xl bg-white shadow-card ring-1 ring-forest-100/60;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-forest-600 text-white shadow-soft hover:bg-forest-700 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply btn bg-white text-forest-700 ring-1 ring-forest-200 hover:bg-forest-50 active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply btn text-forest-700 hover:bg-forest-100;
+  }
+  .btn-accent {
+    @apply btn bg-teal-500 text-white shadow-soft hover:bg-teal-600 active:scale-[0.98];
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+  .section-eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-teal-600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(36, 91, 53, 0.08) 1px, transparent 0);
+    background-size: 28px 28px;
+  }
+  .shimmer-bg {
+    background: linear-gradient(90deg, rgba(36, 91, 53, 0.04) 25%, rgba(36, 91, 53, 0.10) 37%, rgba(36, 91, 53, 0.04) 63%);
+    background-size: 200% 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-forest-50;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-forest-300;
+  border: 2px solid theme('colors.forest.50');
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-forest-400;
+}
